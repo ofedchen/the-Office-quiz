@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { questions } from "./questions";
 import "./App.css";
 import QuestionRenderer from "./components/QuestionRenderer";
@@ -9,6 +9,13 @@ function App() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [showResults, setShowResults] = useState<boolean>(false);
   const [isLast, setIsLast] = useState<boolean>(false);
+
+  useEffect(() => {
+    questions.forEach(q => {
+      const img = new Image();
+      img.src = q.gif;
+    });
+  }, []);
 
   function handleAnswer(isCorrect: boolean): void {
     if (isCorrect) {
