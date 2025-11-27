@@ -33,7 +33,7 @@ function App() {
   return (
     <>
       <header>
-        <h1>Your ultimate The Office quiz</h1>
+        <h1 data-cy="heading">Your ultimate The Office quiz</h1>
       </header>
       <main>
         {!showResults ? (
@@ -41,9 +41,11 @@ function App() {
             q={questions[currentIndex]}
             onSubmit={handleAnswer}
             {...(isLast && { last: isLast })}
+            score={score}
+            questionNumber={currentIndex+1}
           />
         ) : (
-          <ScoreMessage score={score} />
+          <ScoreMessage finalScore={score} />
         )}
       </main>
     </>

@@ -20,7 +20,10 @@ export default function TrueFalse({ q, onSubmit, last }: Props) {
 
   return (
     <>
-      <div className="question-container">
+      <div
+        className="question-container"
+        data-cy="true-false"
+      >
         <h2>{q.question}</h2>
         <div className="options">
           <label className="option">

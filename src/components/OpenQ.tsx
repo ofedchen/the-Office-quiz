@@ -20,7 +20,7 @@ export default function OpenQ({ q, onSubmit, last }: Props) {
 
   return (
     <>
-      <div className="question-container">
+      <div className="question-container" data-cy="open-question">
         <h2>{q.question}</h2>
         <label htmlFor="answer-line" className="openQ-label">
           Your answer:
