@@ -33,7 +33,7 @@ export default function ScoreMessage({ finalScore }: Props) {
         <h2>Your score: {finalScore}</h2>
         <p>{message}</p>
       </div>
-      <img src={gifOption} alt="final-gif" />
+      <img src={gifOption} alt="final-gif" data-cy="result-gif"/>
     </section>
   );
 }

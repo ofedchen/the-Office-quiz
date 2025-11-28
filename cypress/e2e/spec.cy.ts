@@ -18,7 +18,7 @@ describe("The Office quiz", () => {
     cy.get("[data-cy='question']").find("[data-cy='currentScore']").contains(0);
   });
 
-  // question rendered, button is disabled before the answer if picked/typed
+  // first question rendered, button has "Next" and is disabled before the answer picked/typed
   it("visits the site and checks if the question has been rendered and the button is disabled", () => {
     cy.visit("/");
     cy.get("[data-cy='question']")
@@ -26,20 +26,6 @@ describe("The Office quiz", () => {
       .contains("Next")
       .should("be.disabled");
   });
-
-  //
-  // it("enables button after selecting an answer for question 1 (multiple choice)", () => {
-  //   cy.visit("/");
-  //   cy.get("[data-cy='question'][data-question-type='multiple-choice']").then(
-  //     ($q) => {
-  //       if ($q.length) {
-  //         // Select first option
-  //         cy.get("input[type='radio']").first().click();
-  //         cy.contains("button", "Next").should("not.be.disabled");
-  //       }
-  //     }
-  //   );
-  // });
 
   // first question renders, pick answer or type answer - button becomes enabled, click and render the next question
   it("enables button after selecting or typing an answer, click renders the next question", () => {
@@ -57,37 +43,9 @@ describe("The Office quiz", () => {
 
       cy.contains("button", "Next").should("not.be.disabled").click();
     });
-    cy.get("[data-cy='question']").contains("[data-cy='q-number']", "Question 2");
+    cy.get("[data-cy='question']").contains(
+      "[data-cy='q-number']",
+      "Question 2"
+    );
   });
-
-  // Intercept - get from api
-  // it("tests multiple choice specifically", () => {
-  //   cy.intercept("GET", "/api/questions", {
-  //     fixture: "multiple-choice-first.json",
-  //   });
-  //   cy.visit("/");
-  //   cy.get("[data-cy='question'][data-question-type='multiple-choice']").should(
-  //     "exist"
-  //   );
-  //   cy.get("input[type='radio']").first().click();
-  //   cy.contains("button", "Next").should("not.be.disabled");
-  // });
-
-  //display results check - question with index 11? or question number
 });
-
-//fetch
-
-//button contains Next check
-
-//button disabled
-
-//select answer - button enabled
-
-//correct answer / incorrect answer
-
-//last question button finish check
-
-//input field check
-
-//checkboxes array check

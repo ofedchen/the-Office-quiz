@@ -4,6 +4,6 @@ import MultipleChoice from '../../src/components/MultipleChoice.tsx'
 describe('<MultipleChoice />', () => {
   it('renders', () => {
     // see: https://on.cypress.io/mounting-react
-    cy.mount(<MultipleChoice />)
+    cy.mount(<MultipleChoice q="1" last={true} />)
   })
 })
