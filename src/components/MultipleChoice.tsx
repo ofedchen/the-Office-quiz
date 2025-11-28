@@ -21,7 +21,7 @@ export default function MultipleChoice({ q, onSubmit, last }: Props) {
   return (
     <div className="question-container" data-cy="multiple-choice">
       <h2>{q.question}</h2>
-      <div className="options">
+      <div className="options" data-cy="options">
         {q.options.map((option) => (
           <label key={option} className="option radio">
             <input

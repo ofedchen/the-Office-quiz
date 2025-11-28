@@ -34,7 +34,7 @@ export default function MultiSelect({ q, onSubmit, last }: Props) {
     <>
       <div className="question-container" data-cy="multi-select">
         <h2>{q.question}</h2>
-        <div className="options">
+        <div className="options" data-cy="options">
           {q.options.map((option) => (
             <label key={option} className="option">
               <input

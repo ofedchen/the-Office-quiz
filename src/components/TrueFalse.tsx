@@ -22,7 +22,7 @@ export default function TrueFalse({ q, onSubmit, last }: Props) {
     <>
       <div className="question-container" data-cy="true-false">
         <h2>{q.question}</h2>
-        <div className="options">
+        <div className="options" data-cy="options">
           <label className="option">
             <input
               type="radio"
