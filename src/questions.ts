@@ -62,7 +62,7 @@ export const questions: QuestionStyled[] = [
     type: "open-question",
     question: "Which gas station always has yams?",
     validate: (answer) => {
-      return answer.toLowerCase() === "carbondale";
+      return answer.trim().toLowerCase() === "carbondale";
     },
     gif: "4.gif",
   },
@@ -85,7 +85,7 @@ export const questions: QuestionStyled[] = [
     question:
       "Which movie did Pam's 'Mima' unwillingly watch in her hotel room at Niagara Falls?",
     validate: (answer) => {
-      return answer.toLowerCase() === "bruno";
+      return answer.trim().toLowerCase() === "bruno";
     },
     gif: "6.gif",
   },
@@ -112,7 +112,7 @@ export const questions: QuestionStyled[] = [
     question:
       "What was the server password that Jim had to type in after the power went off?",
     validate: (answer) => {
-      return answer.toLowerCase() === "bigboobz";
+      return answer.trim().toLowerCase() === "bigboobz";
     },
     gif: "9.gif",
   },
