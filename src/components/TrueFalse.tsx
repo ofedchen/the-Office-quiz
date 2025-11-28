@@ -20,10 +20,7 @@ export default function TrueFalse({ q, onSubmit, last }: Props) {
 
   return (
     <>
-      <div
-        className="question-container"
-        data-cy="true-false"
-      >
+      <div className="question-container" data-cy="true-false">
         <h2>{q.question}</h2>
         <div className="options">
           <label className="option">
@@ -47,8 +44,12 @@ export default function TrueFalse({ q, onSubmit, last }: Props) {
             False
           </label>
         </div>
-        <img src={q.gif} alt="some kind of the office gif" />
-        <button onClick={handleSubmit} disabled={selectedAnswer === null}>
+        <img src={q.gif} alt="some kind of the office gif" data-cy="q-gif" />
+        <button
+          onClick={handleSubmit}
+          disabled={selectedAnswer === null}
+          data-cy="submit"
+        >
           {!last ? "Next" : "Finish quiz"}
         </button>
       </div>

@@ -31,8 +31,8 @@ export default function OpenQ({ q, onSubmit, last }: Props) {
             onChange={(e) => setAnswer(e.target.value)}
           />
         </label>
-        <img src={q.gif} alt="some kind of the office gif" />
-        <button onClick={handleSubmit} disabled={!answer}>
+        <img src={q.gif} alt="some kind of the office gif" data-cy="q-gif" />
+        <button onClick={handleSubmit} disabled={!answer} data-cy="submit">
           {!last ? "Next" : "Finish quiz"}
         </button>
       </div>

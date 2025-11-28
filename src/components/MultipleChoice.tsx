@@ -36,8 +36,12 @@ export default function MultipleChoice({ q, onSubmit, last }: Props) {
           </label>
         ))}
       </div>
-      <img src={q.gif} alt="some kind of the office gif" />
-      <button onClick={handleSubmit} disabled={!selectedAnswer}>
+      <img src={q.gif} alt="some kind of the office gif" data-cy="q-gif" />
+      <button
+        onClick={handleSubmit}
+        disabled={!selectedAnswer}
+        data-cy="submit"
+      >
         {!last ? "Next" : "Finish quiz"}
       </button>
     </div>

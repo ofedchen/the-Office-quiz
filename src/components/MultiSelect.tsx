@@ -22,11 +22,11 @@ export default function MultiSelect({ q, onSubmit, last }: Props) {
 
   const handleSubmit = () => {
     if (!selectedAnswers.length) return;
-    
-    const isCorrect = 
+
+    const isCorrect =
       q.answers.length === selectedAnswers.length &&
       q.answers.every((answer) => selectedAnswers.includes(answer));
-    
+
     onSubmit(isCorrect);
   };
 
@@ -49,8 +49,12 @@ export default function MultiSelect({ q, onSubmit, last }: Props) {
             </label>
           ))}
         </div>
-        <img src={q.gif} alt="some kind of the office gif" />
-        <button onClick={handleSubmit} disabled={!selectedAnswers.length}>
+        <img src={q.gif} alt="some kind of the office gif" data-cy="q-gif" />
+        <button
+          onClick={handleSubmit}
+          disabled={!selectedAnswers.length}
+          data-cy="submit"
+        >
           {!last ? "Next" : "Finish quiz"}
         </button>
       </div>

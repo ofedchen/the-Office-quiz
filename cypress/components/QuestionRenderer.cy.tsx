@@ -4,7 +4,7 @@ import QuestionRenderer from "../../src/components/QuestionRenderer.tsx";
 describe("<QuestionRenderer />", () => {
   it("renders some question", () => {
     const onSubmitSpy = cy.spy().as("onSubmitSpy");
-    const qcy = {
+    const testQ = {
       id: 9,
       type: "open-question",
       question:
@@ -20,14 +20,14 @@ describe("<QuestionRenderer />", () => {
         score={2}
         questionNumber={3}
         onSubmit={onSubmitSpy}
-        q={qcy}
+        q={testQ}
       />
     );
   });
 
   it("renders last question", () => {
     const onSubmitSpy = cy.spy().as("onSubmitSpy");
-    const qcy = {
+    const testQ = {
       id: 12,
       type: "multiple-choice",
       question:
@@ -42,7 +42,7 @@ describe("<QuestionRenderer />", () => {
         score={2}
         questionNumber={3}
         onSubmit={onSubmitSpy}
-        q={qcy}
+        q={testQ}
         last={true}
       />
     );
