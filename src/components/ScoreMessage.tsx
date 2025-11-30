@@ -30,7 +30,7 @@ export default function ScoreMessage({ finalScore }: Props) {
   return (
     <section className="results">
       <div className="text-container">
-        <h2>Your score: {finalScore}</h2>
+        <h2 data-cy="final-score">Your score: {finalScore}</h2>
         <p data-cy="score-message">{message}</p>
       </div>
       <img src={gifOption} alt="final-gif" data-cy="result-gif"/>

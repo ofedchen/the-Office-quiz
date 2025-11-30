@@ -14,7 +14,7 @@ export default function OpenQ({ q, onSubmit, last }: Props) {
 
   const handleSubmit = () => {
     if (!answer) return;
-    const isCorrect = q.validate(answer);
+    const isCorrect = q.answer === answer.trim().toLowerCase();
     onSubmit(isCorrect);
   };
 
