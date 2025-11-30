@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "type": "multiple-choice",
+    "question": "What is the name of Jim and Pam's daughter?",
+    "options": ["Peepa", "Peepee", "Cece", "Sylvio"],
+    "answer": "Cece",
+    "gif": "1.gif"
+  },
+  {
+    "id": 2,
+    "type": "true-false",
+    "question": "Dwight's tuxedo he is wearing in Casino Night is the one that his grandfather was buried in.",
+    "answer": true,
+    "gif": "2.gif"
+  },
+  {
+    "id": 3,
+    "type": "multi-select",
+    "question": "Which last names did Jan had?",
+    "options": ["Levinson", "Scott", "Moore", "Gould"],
+    "answers": ["Levinson", "Gould"],
+    "gif": "3.gif"
+  },
+  {
+    "id": 4,
+    "type": "open-question",
+    "question": "Which gas station always has yams?",
+    "answer": "carbondale",
+    "gif": "4.gif"
+  }
+]
