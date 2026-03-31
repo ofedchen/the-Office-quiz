@@ -39,7 +39,7 @@ export const questions: QuestionStyled[] = [
     question: "What is the name of Jim and Pam's daughter?",
     options: ["Peepa", "Peepee", "Cece", "Sylvio"],
     answer: "Cece",
-    gif: "1.gif",
+    gif: "1.mp4",
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ export const questions: QuestionStyled[] = [
     question:
       "Dwight's tuxedo he is wearing in Casino Night is the one that his grandfather was buried in.",
     answer: true,
-    gif: "2.gif",
+    gif: "2.mp4",
   },
   {
     id: 3,
@@ -55,7 +55,7 @@ export const questions: QuestionStyled[] = [
     question: "Which last names did Jan had?",
     options: ["Levinson", "Scott", "Moore", "Gould"],
     answers: ["Levinson", "Gould"],
-    gif: "3.gif",
+    gif: "3.mp4",
   },
   {
     id: 4,
@@ -64,7 +64,7 @@ export const questions: QuestionStyled[] = [
     validate: (answer) => {
       return answer.toLowerCase() === "carbondale";
     },
-    gif: "4.gif",
+    gif: "4.mp4",
   },
   {
     id: 5,
@@ -77,7 +77,7 @@ export const questions: QuestionStyled[] = [
       "Everybody Burps",
     ],
     answers: ["Beers in Heaven", "Total Eclipse of the Fart"],
-    gif: "5.gif",
+    gif: "5.mp4",
   },
   {
     id: 6,
@@ -87,7 +87,7 @@ export const questions: QuestionStyled[] = [
     validate: (answer) => {
       return answer.toLowerCase() === "bruno";
     },
-    gif: "6.gif",
+    gif: "6.mp4",
   },
   {
     id: 7,
@@ -96,7 +96,7 @@ export const questions: QuestionStyled[] = [
       "What is the name of the security guard who works in the building?",
     options: ["Hank", "Frank", "Charles", "Eddie"],
     answer: "Hank",
-    gif: "7.gif",
+    gif: "7.mp4",
   },
   {
     id: 8,
@@ -104,7 +104,7 @@ export const questions: QuestionStyled[] = [
     question: "Which toppings did Michael have on his pretzel?",
     options: ["Mint chip", "Oreos", "Marshmallows", "Cinnamon sugar"],
     answers: ["Mint chip", "Oreos", "Marshmallows", "Cinnamon sugar"],
-    gif: "8.gif",
+    gif: "8.mp4",
   },
   {
     id: 9,

@@ -49,7 +49,15 @@ export default function MultiSelect({ q, onSubmit, last }: Props) {
             </label>
           ))}
         </div>
-        <img src={q.gif} alt="some kind of the office gif" />
+        <img
+          src={q.gif}
+          alt="The Office scene related to the question"
+          loading="lazy"
+          decoding="async"
+          fetchPriority="high"
+          width={480}
+          height={280}
+        />
         <button onClick={handleSubmit} disabled={!selectedAnswers.length}>
           {!last ? "Next" : "Finish quiz"}
         </button>

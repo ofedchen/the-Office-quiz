@@ -11,11 +11,12 @@ function App() {
   const [isLast, setIsLast] = useState<boolean>(false);
 
   useEffect(() => {
-    questions.forEach(q => {
-      const img = new Image();
-      img.src = q.gif;
-    });
-  }, []);
+    const nextQuestion = questions[currentIndex + 1];
+    if (!nextQuestion) return;
+
+    const img = new Image();
+    img.src = nextQuestion.gif;
+  }, [currentIndex]);
 
   function handleAnswer(isCorrect: boolean): void {
     if (isCorrect) {

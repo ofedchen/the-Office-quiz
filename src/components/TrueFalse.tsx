@@ -44,7 +44,15 @@ export default function TrueFalse({ q, onSubmit, last }: Props) {
             False
           </label>
         </div>
-        <img src={q.gif} alt="some kind of the office gif" />
+        <img
+          src={q.gif}
+          alt="The Office scene related to the question"
+          loading="lazy"
+          decoding="async"
+          fetchPriority="high"
+          width={480}
+          height={286}
+        />
         <button onClick={handleSubmit} disabled={selectedAnswer === null}>
           {!last ? "Next" : "Finish quiz"}
         </button>

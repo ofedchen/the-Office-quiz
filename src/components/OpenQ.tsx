@@ -31,7 +31,15 @@ export default function OpenQ({ q, onSubmit, last }: Props) {
             onChange={(e) => setAnswer(e.target.value)}
           />
         </label>
-        <img src={q.gif} alt="some kind of the office gif" />
+        <img
+          src={q.gif}
+          alt="The Office scene related to the question"
+          loading="lazy"
+          decoding="async"
+          fetchPriority="high"
+          width={480}
+          height={284}
+        />
         <button onClick={handleSubmit} disabled={!answer}>
           {!last ? "Next" : "Finish quiz"}
         </button>
