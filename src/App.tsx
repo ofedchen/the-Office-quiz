@@ -14,6 +14,14 @@ function App() {
     const nextQuestion = questions[currentIndex + 1];
     if (!nextQuestion) return;
 
+    if (nextQuestion.gif.endsWith(".mp4")) {
+      const video = document.createElement("video");
+      video.preload = "metadata";
+      video.src = nextQuestion.gif;
+      video.load();
+      return;
+    }
+
     const img = new Image();
     img.src = nextQuestion.gif;
   }, [currentIndex]);

@@ -44,15 +44,17 @@ export default function TrueFalse({ q, onSubmit, last }: Props) {
             False
           </label>
         </div>
-        <img
-          src={q.gif}
-          alt="The Office scene related to the question"
-          loading="lazy"
-          decoding="async"
-          fetchPriority="high"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
           width={480}
-          height={286}
-        />
+          height={280}
+        >
+          <source src={q.gif} type="video/mp4" />
+        </video>
         <button onClick={handleSubmit} disabled={selectedAnswer === null}>
           {!last ? "Next" : "Finish quiz"}
         </button>

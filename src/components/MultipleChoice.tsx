@@ -36,9 +36,9 @@ export default function MultipleChoice({ q, onSubmit, last }: Props) {
           </label>
         ))}
       </div>
-      <video autoPlay >
-        <source src={q.gif} type="video/mp4"/>
-      </video>
+        <video autoPlay muted loop playsInline preload="metadata" width={480} height={280}>
+          <source src={q.gif} type="video/mp4" />
+        </video>
       <button onClick={handleSubmit} disabled={!selectedAnswer}>
         {!last ? "Next" : "Finish quiz"}
       </button>

@@ -114,7 +114,7 @@ export const questions: QuestionStyled[] = [
     validate: (answer) => {
       return answer.toLowerCase() === "bigboobz";
     },
-    gif: "9.gif",
+    gif: "9.mp4",
   },
   {
     id: 10,
@@ -122,7 +122,7 @@ export const questions: QuestionStyled[] = [
     question: "Who didn't invest in WUPHF.com?",
     options: ["Phyllis", "Andy", "Nellie", "Darryl"],
     answers: ["Phyllis", "Nellie"],
-    gif: "10.gif",
+    gif: "10.mp4",
   },
   {
     id: 11,
@@ -130,7 +130,7 @@ export const questions: QuestionStyled[] = [
     question:
       "One of the animals Michael mentions in the Fun Run episode has 'the head of a monkey, with the ears of a kangaroo, with… the body of a porcupine'",
     answer: false,
-    gif: "11.gif",
+    gif: "11.mp4",
   },
   {
     id: 12,
@@ -139,6 +139,6 @@ export const questions: QuestionStyled[] = [
       "In the episode 'The Fire' who was Oscar's pick in the 'Who would you do?' game?",
     options: ["Ryan", "Kelly", "Jan", "Pam"],
     answer: "Pam",
-    gif: "12.gif",
+    gif: "12.mp4",
   },
 ];

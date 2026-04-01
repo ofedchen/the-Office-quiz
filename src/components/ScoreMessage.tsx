@@ -12,19 +12,19 @@ export default function ScoreMessage({ score }: Props) {
   if (score < 3) {
     message =
       "0-2: Yikes… looks like all you know about the Office is from occasional gifs. Just watch the show!";
-    gifOption = "loser.gif";
+    gifOption = "loser.mp4";
   } else if (score < 6) {
     message =
       "3-5: You're basically Creed: confused, but sometimes getting things right. Cool beans!";
-    gifOption = "ok.gif";
+    gifOption = "ok.mp4";
   } else if (score < 10) {
     message =
       "6-9: Not bad at all! You could use a rewatch round or two, but your vibe is perfect";
-    gifOption = "great.gif";
+    gifOption = "great.mp4";
   } else {
     message =
       "10+: Legendary! You're the new Assistant Regional Manager. Sorry - Assistant to the Regional Manager.";
-    gifOption = "legend.gif";
+    gifOption = "legend.mp4";
   }
 
   return (
@@ -33,7 +33,17 @@ export default function ScoreMessage({ score }: Props) {
         <h2>Your score: {score}</h2>
         <p>{message}</p>
       </div>
-      <img src={gifOption} alt="final-gif" loading="lazy" fetchPriority="high" />
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        width={480}
+        height={280}
+      >
+        <source src={gifOption} type="video/mp4" />
+      </video>
     </section>
   );
 }

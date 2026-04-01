@@ -22,11 +22,11 @@ export default function MultiSelect({ q, onSubmit, last }: Props) {
 
   const handleSubmit = () => {
     if (!selectedAnswers.length) return;
-    
-    const isCorrect = 
+
+    const isCorrect =
       q.answers.length === selectedAnswers.length &&
       q.answers.every((answer) => selectedAnswers.includes(answer));
-    
+
     onSubmit(isCorrect);
   };
 
@@ -49,15 +49,17 @@ export default function MultiSelect({ q, onSubmit, last }: Props) {
             </label>
           ))}
         </div>
-        <img
-          src={q.gif}
-          alt="The Office scene related to the question"
-          loading="lazy"
-          decoding="async"
-          fetchPriority="high"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
           width={480}
           height={280}
-        />
+        >
+          <source src={q.gif} type="video/mp4" />
+        </video>
         <button onClick={handleSubmit} disabled={!selectedAnswers.length}>
           {!last ? "Next" : "Finish quiz"}
         </button>

@@ -31,15 +31,18 @@ export default function OpenQ({ q, onSubmit, last }: Props) {
             onChange={(e) => setAnswer(e.target.value)}
           />
         </label>
-        <img
-          src={q.gif}
-          alt="The Office scene related to the question"
-          loading="lazy"
-          decoding="async"
-          fetchPriority="high"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
           width={480}
           height={284}
-        />
+        >
+          <source src={q.gif} type="video/mp4" />
+        </video>
+
         <button onClick={handleSubmit} disabled={!answer}>
           {!last ? "Next" : "Finish quiz"}
         </button>
